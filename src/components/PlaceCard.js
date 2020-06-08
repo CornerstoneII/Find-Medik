@@ -1,9 +1,8 @@
-import React from 'react';
-import { Rate } from 'antd';
+import React from "react";
 
 // TODO: info is bad naming.
-const PlaceCard = (({ info, key }) => {
-  const { address, distanceText, name, openNow, photoUrl, priceLevel, rating, timeText } = info;
+const PlaceCard = ({ info, key }) => {
+  const { address, distanceText, name, openNow, photoUrl, timeText } = info;
   return (
     <div key={key} className="col-3 w-100 mx-4 my-4">
       <img src={photoUrl} className="image-wrapper-sm mb-2" alt="ice-cream" />
@@ -15,17 +14,15 @@ const PlaceCard = (({ info, key }) => {
           <span className="d-block">{timeText}</span>
         </div>
         <ul className="list-group list-group-flush">
-          {openNow ?
+          {openNow ? (
             <li className="list-group-item">Open</li>
-            :
+          ) : (
             <li className="list-group-item">Closed</li>
-          }
-          <li className="list-group-item">Rating - <Rate value={rating} /></li>
-          <li className="list-group-item">Price - <Rate value={priceLevel} character="$" /></li>
+          )}
         </ul>
       </div>
     </div>
   );
-});
+};
 
 export default PlaceCard;
