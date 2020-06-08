@@ -1,6 +1,6 @@
 ## Welcome
 
-A React web app that integrates with the Google Maps API to find you ice creams.
+A React web app that integrates with the Google Maps API to find you Hospitals or Clinics.
 
 ## Setup
 
